@@ -4,12 +4,10 @@
 A simple demo for testing DMAC-adv
 """
 import torch
-from torch.autograd import Variable
 import torch.nn as nn
+from torch.autograd import Variable
 
-import sys
-import os
-import cv2
+import os, cv2
 import numpy as np
 
 import dmac_vgg_skip as dmac_vgg
@@ -48,7 +46,7 @@ def vis_fun(output0,output1,outputname1,outputname2):
 #------------------------------------------------------------------------------
 #   CISDL
 #------------------------------------------------------------------------------
-def CISDL(probe,donor):
+def CISDL(probe, donor):
 	if os.path.exists(probe) and os.path.exists(donor):
 		print probe + ' and ' + donor + ' are proccessed!'
 	else:
